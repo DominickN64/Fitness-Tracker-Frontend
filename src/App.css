@@ -36,3 +36,79 @@
     transform: rotate(360deg);
   }
 }
+
+.userEmails{
+padding-bottom:10px ;
+padding-top:10px;
+}
+.userEmails span{
+
+  cursor: pointer;
+
+}
+
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.user {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.userEmails {
+  padding: 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userEmails span {
+  font-weight: bold;
+}
+
+.userEmails:hover {
+  background-color: #0056b3;
+}
+
+.user > div:nth-child(2) {
+  padding: 15px;
+  line-height: 1.6;
+}
+
+.user > div:nth-child(2) div {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.user > div:nth-child(2) div:last-child {
+  margin-bottom: 0;
+}
+
+.userEmails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.userEmails img:hover {
+
+  background-color: antiquewhite;
+
+}
+

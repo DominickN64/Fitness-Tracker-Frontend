@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import UserCard from "./UserCard";
 
 function App() {
+  const [users, setUsers] = useState([]);
+  const fetchData = async () => {
+    const response = await axios.get("http://127.0.0.1:5000/data");
+
+    console.log(response.data);
+
+    setUsers(response.data);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        {users.map((user) => (
+          <UserCard user={user} />
+        ))}
+      </div>
     </div>
   );
 }
