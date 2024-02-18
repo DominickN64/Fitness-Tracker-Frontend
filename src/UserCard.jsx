@@ -20,8 +20,9 @@ const UserCard = ({ user }) => {
 
             {showNotes && user.notes.length > 0 ? (
                 <div>
-                    {user.notes.map((note, index) => (
-                        <div>{note}</div>
+                    {user.notes.map((note) => (
+                        <div>{note.note} | {note.date}</div>
+
                     ))}
                 </div>
             ) : showNotes ? (
